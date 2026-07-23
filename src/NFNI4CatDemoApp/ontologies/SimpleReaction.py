@@ -1,7 +1,7 @@
 from owlready2 import *
 from NFNI4CatDemoApp.Exceptions.InformationException import MissingDataException
 
-onto = get_ontology("http://test.org/onto.owl")
+onto = get_ontology("empty_ontology")
 
 
 with onto:

@@ -2,7 +2,8 @@
 name= "NFDI3CatDemoApp"
 version = "0.0.1"
 dependencies = [
-    "owlready2"
+    "owlready2",
+    "rdflib"
 ]
 
 [tool.ruff]
