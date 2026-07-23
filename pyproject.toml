@@ -1,3 +1,10 @@
+[project]
+name= "NFDI3CatDemoApp"
+version = "0.0.1"
+dependencies = [
+    "owlready2"
+]
+
 [tool.ruff]
 line-length = 127
 target-version = "py310"
