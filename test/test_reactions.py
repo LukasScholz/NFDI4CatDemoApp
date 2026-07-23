@@ -59,6 +59,21 @@ class TestReactions(unittest.TestCase):
         sync_reasoner_pellet()
         self.assertTrue(reaction.react())
 
+    def test_incorrect_reaction(self):
+        # Reagents are missing in this test
+        # Products
+        oxaloacetate = Products("oxaloacetate")
+        glutamate = Products("L-glutamate")
+
+        with self.assertRaises(Exception):
+            # Reaction
+            AllDifferent([oxaloacetate, glutamate])
+            reaction = Reaction(products=[oxaloacetate, glutamate])
+
+            close_world(Reaction)
+            sync_reasoner_pellet()
+            reaction.react()
+
 
 if __name__ == "__main__":
     unittest.main()
